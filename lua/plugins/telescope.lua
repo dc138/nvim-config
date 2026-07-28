@@ -28,7 +28,7 @@ return {
 		vim.keymap.set("n", "<leader>tf", "<cmd>Telescope find_files<cr>", { desc = "Telescope: find files in cwd" })
 		vim.keymap.set("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", { desc = "Telescope: grep string in cwd" })
 
-		vim.keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>", { desc = "Telescope: git status" })
-		vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", { desc = "Telescope: git files" })
+		vim.keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>", { desc = "Git, Telescope: git status" })
+		vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", { desc = "Git, Telescope: git files" })
     end,
 }
