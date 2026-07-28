@@ -17,10 +17,18 @@ return {
             "mason-org/mason.nvim",
             "neovim/nvim-lspconfig",
         },
+        opts = {},
+    },
+    {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        dependencies = {
+            "mason-org/mason.nvim",
+        },
         opts = {
             ensure_installed = {
-                "lua_ls",
-                "rust_analyzer",
+                "lua-language-server",
+                "rust-analyzer",
+                "tree-sitter-cli",
             },
         },
     },
