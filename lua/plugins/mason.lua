@@ -29,6 +29,7 @@ return {
                 "lua-language-server",
                 "rust-analyzer",
                 "tree-sitter-cli",
+                "json-lsp",
             },
         },
     },
