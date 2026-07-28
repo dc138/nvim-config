@@ -23,6 +23,8 @@ return {
         telescope.load_extension("fzf")
 
         vim.keymap.set("n", "<leader>tt", "<cmd>Telescope<cr>", { desc = "Telescope: show all builtin pickers" })
+        vim.keymap.set("n", "<leader>tk", "<cmd>Telescope keymaps<cr>", { desc = "Telescope: show keymaps" })
+
 		vim.keymap.set("n", "<leader>tf", "<cmd>Telescope find_files<cr>", { desc = "Telescope: find files in cwd" })
 		vim.keymap.set("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", { desc = "Telescope: grep string in cwd" })
 
