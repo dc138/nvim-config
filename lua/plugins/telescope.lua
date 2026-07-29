@@ -32,6 +32,12 @@ return {
         telescope.load_extension("ui-select")
 
         vim.keymap.set(
+            "n", "grr",
+            function() builtin.lsp_references() end,
+            { desc = "LSP, Telescope: show references" }
+        )
+
+        vim.keymap.set(
             "n","z=",
             function() builtin.spell_suggest(themes.get_cursor()) end,
             { desc = "Spell, Telescope: suggest spellings" }
