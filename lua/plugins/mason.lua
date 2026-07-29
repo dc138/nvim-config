@@ -28,8 +28,9 @@ return {
             ensure_installed = {
                 "lua-language-server",
                 "rust-analyzer",
-                "tree-sitter-cli",
                 "json-lsp",
+                "pyright",
+                "tree-sitter-cli",
             },
         },
     },
