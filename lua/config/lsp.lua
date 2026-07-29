@@ -17,6 +17,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
                 vim.notify("LSP does not support any go-to structural actions.", vim.log.levels.WARN)
             end
         end, { buffer = args.buf, desc = "LSP: smart go-to symbol" })
+
+        vim.keymap.set("n", "<C-K>", function()
+            vim.lsp.buf.hover({ border = "single" })
+        end, { buffer = args.buf, desc = "LSP: hover documentation" })
     end,
 })
 
