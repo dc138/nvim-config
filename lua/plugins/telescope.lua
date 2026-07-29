@@ -4,10 +4,13 @@ return {
         "nvim-lua/plenary.nvim",
         "nvim-tree/nvim-web-devicons",
         { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+        "nvim-telescope/telescope-ui-select.nvim",
     },
     config = function()
         local telescope = require("telescope")
         local actions = require("telescope.actions")
+        local themes = require("telescope.themes")
+        local builtin = require("telescope.builtin")
 
         telescope.setup({
             defaults = {
@@ -18,9 +21,21 @@ return {
                     },
                 },
             },
+            extensions = {
+                ["ui-select"] = {
+                    themes.get_cursor()
+                }
+            },
         })
 
         telescope.load_extension("fzf")
+        telescope.load_extension("ui-select")
+
+        vim.keymap.set(
+            "n","z=",
+            function() builtin.spell_suggest(themes.get_cursor()) end,
+            { desc = "Spell, Telescope: suggest spellings" }
+        )
 
         vim.keymap.set("n", "<leader>tt", "<cmd>Telescope<cr>", { desc = "Telescope: show all builtin pickers" })
         vim.keymap.set("n", "<leader>tk", "<cmd>Telescope keymaps<cr>", { desc = "Telescope: show keymaps" })
