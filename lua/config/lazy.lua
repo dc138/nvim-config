@@ -21,9 +21,15 @@ require("lazy").setup({
         { import = "plugins" },
     },
     install = {
-        colorscheme = { "habamax" }
+        colorscheme = { "habamax" },
     },
     checker = {
-        enabled = true
+        enabled = true,
+        notify = false,
+    },
+    change_detection = {
+        notify = false,
     },
 })
+
+vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>", {desc = "Lazy: open the main menu"})
