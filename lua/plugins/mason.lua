@@ -1,4 +1,6 @@
-return {
+local is_nixos = vim.uv.fs_stat("/etc/NIXOS") ~= nil
+
+return is_nixos and {} or {
     {
         "mason-org/mason.nvim",
         opts = {
