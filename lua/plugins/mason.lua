@@ -28,11 +28,12 @@ return is_nixos and {} or {
         },
         opts = {
             ensure_installed = {
+                "tree-sitter-cli",
                 "lua-language-server",
                 "rust-analyzer",
                 "json-lsp",
                 "pyright",
-                "tree-sitter-cli",
+                "tinymist",
             },
         },
     },
