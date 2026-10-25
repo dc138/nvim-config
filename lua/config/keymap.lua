@@ -26,3 +26,6 @@ vim.keymap.set("v", "<leader>'", "c''<ESC>P", { desc = "Surround with ''" })
 vim.keymap.set("v", "<leader>`", "c``<ESC>P", { desc = "Surround with ``" })
 vim.keymap.set("v", "<leader>«", "c«»<ESC>P", { desc = "Surround with «»" })
 vim.keymap.set("v", "<leader>$", "c$$<ESC>P", { desc = "Surround with $$" })
+
+-- Toggle dictionary with `ññ`
+vim.keymap.set("n", "ññ", "<cmd>set spelllang=es,en spell!<CR>", { desc = "Toggle spell check for ES,EN" })
